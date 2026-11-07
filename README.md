@@ -1,4 +1,4 @@
-# cem_peede_felder: Fast Coarsened Exact Matching for Large Datasets in Stata
+# Fast Coarsened Exact Matching for Large Datasets in Stata
 
 > Replicates the matching indicator and weights of the Stata package `cem` (Blackwell et al. 2009; Iacus, King & Porro 2012) using a sort-based algorithm. On large administrative datasets with 1 million+ observations it needs seconds to minutes, where `cem` needs hours.
 
@@ -53,7 +53,7 @@ Lennert Peede and Lars Felder. If you spot mistakes or unexpected behaviour, ple
 
 ## Measured run times with example dataset
 
-The data has one period, 6 matching variables with 4 categories each (4,096 possible cells) and 30% treated. The settings are Part 3 of `cem_peede_felder_tests.do`, run run with Stata/MP 18.5 using 8 cores on a laptop with an Intel i3-1315U processor. Each time is a single run in seconds. `cem` was run with `noimbal`, so it computes matching and weights only, like `cem_peede_felder`.
+The data has one period, 6 matching variables with 4 categories each (4,096 possible cells) and 30% treated. The settings are Part 3 of `cem_peede_felder_tests.do`, run with Stata/MP 18.5 using 8 cores on a laptop with an Intel i3-1315U processor. Each time is a single run in seconds. `cem` was run with `noimbal`, so it computes matching and weights only, like `cem_peede_felder`.
 
 | N | matched | `cem_peede_felder` | `cem` | `cem` / ours |
 |---:|---:|---:|---:|---:|
